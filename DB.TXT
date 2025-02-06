@@ -17,3 +17,8 @@ SELECT strftime('%Y-%m', fecha_venta) AS mes_anio,
        SUM(Facturación) AS total_facturado
 FROM ventas_por_mes
 GROUP BY mes_anio;
+
+Eliminar los NULL de las columnas
+
+DELETE FROM ventas_por_mes
+WHERE Producto IS NULL OR ganancia_total IS NULL;
